@@ -12,12 +12,13 @@ function kc([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl
 
 #kubectl get
 function kg([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl get $params }
-function kdpo([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl describe pods $params }
+function kgpo([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl get pods $params }
 function kgdep([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl get deployment $params }
 function kgoyaml([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl get -o=yaml $params }
 
 #kubectl describe
 function kd([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl describe $params }
+function kdpo([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl describe pods $params }
 function kddep([Parameter(ValueFromRemainingArguments = $true)]$params) { & kubectl describe deployment $params }
 
 #kubectl edit
