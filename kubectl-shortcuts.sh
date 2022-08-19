@@ -1,4 +1,6 @@
 alias k='kubectl'
+alias kn='kubectl -n $ns'
+alias kl='kubectl -n $ns logs'
 alias klf='kubectl -n $ns logs --tail=200  -f'
 alias kgs='kubectl -n $ns get service -o wide'
 alias kgd='kubectl -n $ns get deployment -o wide'
