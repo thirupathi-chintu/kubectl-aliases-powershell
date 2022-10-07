@@ -61,8 +61,8 @@ function kops(){
 function kfp() { kubectl -n $ns get pod -o wide| grep $@; }
 function kfs() { kubectl -n $ns get service -o wide| grep $@; } 
 function kfd() { kubectl -n $ns get deployment -o wide | grep $@; }
-function kxsh() { kubectl -n $ns exec -ti $@ sh; }
-function kxbash() { kubectl -n $ns exec -ti $@ bash; }
+function kxsh() { kubectl -n $ns exec -ti $@ -- sh; }
+function kxbash() { kubectl -n $ns exec -ti $@ -- bash; }
 function kph() { kubectl -n $ns exec -ti $@ -- sh -c 'apk -q update; apk add -q curl jq; curl localhost:8080/__health | jq'; }
 function kstop() {
 	echo "Stopping $1"
